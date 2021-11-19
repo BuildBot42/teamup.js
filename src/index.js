@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 class Teamjs {
 
-  /* Intializes a new client with provided options.
+  /** Intializes a new client with provided options.
   * @param {Object} [options] Options object for configuration.
   * @param {string} [options.token] Required. Your API key for https://api.teamup.com
   * @param {string} [options.defPassword] Optional. A default password to use when operating on calendars.
@@ -83,7 +83,7 @@ class Teamjs {
     })
   }
 
-  /* Fetches a calendar's configuration.
+  /** Fetches a calendar's configuration.
   * @param {string|Object} calendarOrOptions Either a calendar Id, or options. If options, supports `password` {string}, `lang` {string}, and `timezone` {string}; requires `calendar` {string}.
   * @return {Promise<Object>} The object representing the calendar's configuration.
   * @example
@@ -123,7 +123,7 @@ class Teamjs {
 
   }
 
-  /* Fetches a calendar's events collection.
+  /** Fetches a calendar's events collection.
   * @param {string|Object} calendarOrOptions Either a calendar Id, or options. If options, supports `password` {string}, `lang` {string}, `timezone` {string}, `subcalendarIds` {Integer[]}, `startDate` {Date}, and `endDate` {Date}; requires `calendar` {string}.
   * @return {Promise<Array>} An array containing all queried events.
   * @example
@@ -173,7 +173,7 @@ class Teamjs {
 
   }
 
-  /* Fetches a single event by Id.
+  /** Fetches a single event by Id.
   * @param {Object} [options] An object representing the options provided.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the event.
@@ -228,7 +228,7 @@ class Teamjs {
     }
   }
 
-  /* Creates an event with provided options.
+  /** Creates an event with provided options.
   * @param {Object} [options] Required. Options provided to create the event.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the event.
@@ -268,7 +268,7 @@ class Teamjs {
     return res.event || res;
   }
 
-  /* Updates an existing event with provided options.
+  /** Updates an existing event with provided options.
   * @param {Object} [options] Required. Options provided to update the event.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the event.
@@ -310,7 +310,7 @@ class Teamjs {
     return res.event || res;
   }
 
-  /* Deletes an event with provided options.
+  /** Deletes an event with provided options.
   * @param {Object} [options] Required. Options provided to delete the event.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the response.
@@ -352,7 +352,7 @@ class Teamjs {
     return res.undo_id || res;
   }
 
-  /* Gets a list of recently changed events.
+  /** Gets a list of recently changed events.
   * @param {Object} [options] Required. Options to determine return value.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the events.
@@ -389,7 +389,7 @@ class Teamjs {
     return res.events || res;
   }
 
-  /* Searches for events with a query string.
+  /** Searches for events with a query string.
   * @param {Object} [options] Required. Options to determine return value.
   * @param {String} [options.password] defaults to default password. A password to provide to access the calendar.
   * @param {String} [options.lang] defaults to default language. The language to use when receiving the events.
@@ -434,7 +434,7 @@ class Teamjs {
     return res.events || res;
   }
 
-  /* Gets the event history of a specific event.
+  /** Gets the event history of a specific event.
   * @param {Object} [options] An object representing the options provided.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the event.
@@ -469,7 +469,7 @@ class Teamjs {
     return res;
   }
 
-  /* Gets the auxiliary information of an event.
+  /** Gets the auxiliary information of an event.
   * @param {Object} [options] An object representing the options provided.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the event.
@@ -504,7 +504,7 @@ class Teamjs {
     return res;
   }
 
-  /* Fetches a calendar's subcalendars collection.
+  /** Fetches a calendar's subcalendars collection.
   * @param {string|Object} calendarOrOptions Either a calendar Id, or options. If options, supports `password` {string}, `lang` {string}, and `timezone` {string}; requires `calendar` {string}.
   * @return {Promise<Array>} An array containing all subcalendars.
   * @example
@@ -544,7 +544,7 @@ class Teamjs {
     return res.subcalendars || res;
   }
 
-  /* Fetches a single subcalendar by Id.
+  /** Fetches a single subcalendar by Id.
   * @param {Object} [options] An object representing the options provided.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the subcalendar.
@@ -580,7 +580,7 @@ class Teamjs {
     return res.subcalendar || res;
   }
 
-  /* Creates a subcalendar with provided options.
+  /** Creates a subcalendar with provided options.
   * @param {Object} [options] Required. Options provided to create the subcalendar.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the subcalendar.
@@ -620,7 +620,7 @@ class Teamjs {
     return res.subcalendar || res;
   }
 
-  /* Updates an existing subcalendar with provided options.
+  /** Updates an existing subcalendar with provided options.
   * @param {Object} [options] Required. Options provided to update the subcalendar.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the subcalendar.
@@ -662,7 +662,7 @@ class Teamjs {
     return res.subcalendar || res;
   }
 
-  /* Deletes a subcalendar with provided options.
+  /** Deletes a subcalendar with provided options.
   * @param {Object} [options] Required. Options provided to delete the subcalendar.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.calendar] Required. The calendar Id of the subcalendar to delete.
@@ -698,7 +698,7 @@ class Teamjs {
     return res
   }
 
-  /* Fetches a calendar's access keys collection.
+  /** Fetches a calendar's access keys collection.
   * @param {string|Object} calendarOrOptions Either a calendar Id, or options. If options, supports `password` {string}, `lang` {string}, and `timezone` {string}; requires `calendar` {string}.
   * @return {Promise<Array>} An array containing all access keys.
   * @example
@@ -738,7 +738,7 @@ class Teamjs {
     return res.keys || res;
   }
 
-  /* Fetches a single access key by Id.
+  /** Fetches a single access key by Id.
   * @param {Object} [options] An object representing the options provided.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the access key.
@@ -774,7 +774,7 @@ class Teamjs {
     return res.key || res;
   }
 
-  /* Creates a access key with provided options.
+  /** Creates a access key with provided options.
   * @param {Object} [options] Required. Options provided to create the access key.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the access key.
@@ -814,7 +814,7 @@ class Teamjs {
     return res.key || res;
   }
 
-  /* Updates an existing access key with provided options.
+  /** Updates an existing access key with provided options.
   * @param {Object} [options] Required. Options provided to update the access key.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.lang] defaults to default language. The language to use when receving the access key.
@@ -856,7 +856,7 @@ class Teamjs {
     return res.key || res;
   }
 
-  /* Deletes an access key with provided options.
+  /** Deletes an access key with provided options.
   * @param {Object} [options] Required. Options provided to delete the access key.
   * @param {string} [options.password] defaults to defult password. A password to provide to access the calendar.
   * @param {string} [options.calendar] Required. The calendar Id of the access key to delete.
