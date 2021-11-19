@@ -1,0 +1,22 @@
+{
+  "name": "teamup.js",
+  "version": "0.0.0",
+  "description": "A simple Node.js wrapper for https://api.teamup.com",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildBot42/teamup.js.git"
+  },
+  "author": "Build_Bot",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BuildBot42/teamup.js/issues"
+  },
+  "homepage": "https://github.com/BuildBot42/teamup.js#readme",
+  "dependencies": {
+    "node-fetch": "2.6.6"
+  }
+}
