@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 
-class Teamjs {
+class Teamupjs {
 
   /** Intializes a new client with provided options.
   * @param {Object} [options] Options object for configuration.
@@ -10,9 +10,9 @@ class Teamjs {
   * @param {string} [options.defTimezone] defaults to `UTC`. A default timezone to use when operating on calendars.
   * @param {boolean} [options.verifyToken] defaults to `true`. Whether or not to verify the API key upon intialization.
   * @example
-  * const Teamjs = require('team.js');
+  * const Teamupjs = require('team.js');
   * //Client with default options and no extra defaults
-  * const client = new Teamjs({
+  * const client = new Teamupjs({
   *   token: 'YOUR_API_KEY_HERE',
   * });
   */
@@ -894,4 +894,4 @@ class Teamjs {
 
 }
 
-module.exports = Teamjs;
+module.exports = Teamupjs;

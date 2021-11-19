@@ -1,34 +1,34 @@
-<a name="Teamjs"></a>
+<a name="Teamupjs"></a>
 
-## Teamjs
+## Teamupjs
 **Kind**: global class  
 
-* [Teamjs](#Teamjs)
-    * [new Teamjs([options])](#new_Teamjs_new)
-    * [.getCalendarConfiguration(calendarOrOptions)](#Teamjs+getCalendarConfiguration) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.getEventsCollection(calendarOrOptions)](#Teamjs+getEventsCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
-    * [.getEvent([options])](#Teamjs+getEvent) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>Promise.&lt;String&gt;</code>
-    * [.createEvent([options])](#Teamjs+createEvent) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.updateEvent([options])](#Teamjs+updateEvent) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.deleteEvent([options])](#Teamjs+deleteEvent) ⇒ <code>Promise.&lt;String&gt;</code>
-    * [.getModifiedSinceEvents([options])](#Teamjs+getModifiedSinceEvents) ⇒ <code>Promise.&lt;Array&gt;</code>
-    * [.searchEvents([options])](#Teamjs+searchEvents) ⇒ <code>Promise.&lt;Array&gt;</code>
-    * [.getEventHistory([options])](#Teamjs+getEventHistory) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.getEventAux([options])](#Teamjs+getEventAux) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.getSubcalendarsCollection(calendarOrOptions)](#Teamjs+getSubcalendarsCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
-    * [.getSubcalendar([options])](#Teamjs+getSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.createSubcalendar([options])](#Teamjs+createSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.updateSubcalendar([options])](#Teamjs+updateSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.deleteSubcalendar([options])](#Teamjs+deleteSubcalendar) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
-    * [.getAccessKeysCollection(calendarOrOptions)](#Teamjs+getAccessKeysCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
-    * [.getAccessKey([options])](#Teamjs+getAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.createAccessKey([options])](#Teamjs+createAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.updateAccessKey([options])](#Teamjs+updateAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
-    * [.deleteAccessKey([options])](#Teamjs+deleteAccessKey) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
+* [Teamupjs](#Teamupjs)
+    * [new Teamupjs([options])](#new_Teamupjs_new)
+    * [.getCalendarConfiguration(calendarOrOptions)](#Teamupjs+getCalendarConfiguration) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getEventsCollection(calendarOrOptions)](#Teamupjs+getEventsCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
+    * [.getEvent([options])](#Teamupjs+getEvent) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>Promise.&lt;String&gt;</code>
+    * [.createEvent([options])](#Teamupjs+createEvent) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.updateEvent([options])](#Teamupjs+updateEvent) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.deleteEvent([options])](#Teamupjs+deleteEvent) ⇒ <code>Promise.&lt;String&gt;</code>
+    * [.getModifiedSinceEvents([options])](#Teamupjs+getModifiedSinceEvents) ⇒ <code>Promise.&lt;Array&gt;</code>
+    * [.searchEvents([options])](#Teamupjs+searchEvents) ⇒ <code>Promise.&lt;Array&gt;</code>
+    * [.getEventHistory([options])](#Teamupjs+getEventHistory) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getEventAux([options])](#Teamupjs+getEventAux) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.getSubcalendarsCollection(calendarOrOptions)](#Teamupjs+getSubcalendarsCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
+    * [.getSubcalendar([options])](#Teamupjs+getSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.createSubcalendar([options])](#Teamupjs+createSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.updateSubcalendar([options])](#Teamupjs+updateSubcalendar) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.deleteSubcalendar([options])](#Teamupjs+deleteSubcalendar) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
+    * [.getAccessKeysCollection(calendarOrOptions)](#Teamupjs+getAccessKeysCollection) ⇒ <code>Promise.&lt;Array&gt;</code>
+    * [.getAccessKey([options])](#Teamupjs+getAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.createAccessKey([options])](#Teamupjs+createAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.updateAccessKey([options])](#Teamupjs+updateAccessKey) ⇒ <code>Promise.&lt;Object&gt;</code>
+    * [.deleteAccessKey([options])](#Teamupjs+deleteAccessKey) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
 
-<a name="new_Teamjs_new"></a>
+<a name="new_Teamupjs_new"></a>
 
-### new Teamjs([options])
+### new Teamupjs([options])
 Intializes a new client with provided options.
 
 
@@ -43,18 +43,14 @@ Intializes a new client with provided options.
 
 **Example**  
 ```js
-const Teamjs = require('team.js');
-//Client with default options and no extra defaults
-const client = new Teamjs({
-  token: 'YOUR_API_KEY_HERE',
-});
+const Teamupjs = require('team.js');//Client with default options and no extra defaultsconst client = new Teamupjs({  token: 'YOUR_API_KEY_HERE',});
 ```
-<a name="Teamjs+getCalendarConfiguration"></a>
+<a name="Teamupjs+getCalendarConfiguration"></a>
 
-### teamjs.getCalendarConfiguration(calendarOrOptions) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.getCalendarConfiguration(calendarOrOptions) ⇒ <code>Promise.&lt;Object&gt;</code>
 Fetches a calendar's configuration.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The object representing the calendar's configuration.  
 
 | Param | Type | Description |
@@ -63,18 +59,14 @@ Fetches a calendar's configuration.
 
 **Example**  
 ```js
-//Single parameter calendar provided
-client.getCalendarConfiguration('a_calendar_Id').then(res => console.log(res));
-
-//Options paramter provided
-client.getCalendarConfiguration({calendar: 'a_calendar_Id', password: 'thePassword'}).then(res => console.log(res));
+//Single parameter calendar providedclient.getCalendarConfiguration('a_calendar_Id').then(res => console.log(res));//Options paramter providedclient.getCalendarConfiguration({calendar: 'a_calendar_Id', password: 'thePassword'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getEventsCollection"></a>
+<a name="Teamupjs+getEventsCollection"></a>
 
-### teamjs.getEventsCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
+### teamupjs.getEventsCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
 Fetches a calendar's events collection.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Array&gt;</code> - An array containing all queried events.  
 
 | Param | Type | Description |
@@ -83,18 +75,14 @@ Fetches a calendar's events collection.
 
 **Example**  
 ```js
-//Single parameter calendar provided
-client.getEventsCollection('a_calendar_Id').then(res => console.log(res));
-
-//Options parameter provided
-client.getEventsCollection({calendar: 'a_calendar_Id', startDate: new Date(), endDate: new Date()}).then(res => console.log(res));
+//Single parameter calendar providedclient.getEventsCollection('a_calendar_Id').then(res => console.log(res));//Options parameter providedclient.getEventsCollection({calendar: 'a_calendar_Id', startDate: new Date(), endDate: new Date()}).then(res => console.log(res));
 ```
-<a name="Teamjs+getEvent"></a>
+<a name="Teamupjs+getEvent"></a>
 
-### teamjs.getEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>Promise.&lt;String&gt;</code>
+### teamupjs.getEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code> \| <code>Promise.&lt;String&gt;</code>
 Fetches a single event by Id.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> \| <code>Promise.&lt;String&gt;</code> - The object containing the event, or the stringified event in iCalendar format.  
 
 | Param | Type | Description |
@@ -109,18 +97,14 @@ Fetches a single event by Id.
 
 **Example**  
 ```js
-//Get single event
-client.getEvent({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));
-
-//Get single event in iCalendar format
-client.getEvent({calendar: 'a_calendar_Id', event: '0000', icf: true}).then(res => console.log(res));
+//Get single eventclient.getEvent({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));//Get single event in iCalendar formatclient.getEvent({calendar: 'a_calendar_Id', event: '0000', icf: true}).then(res => console.log(res));
 ```
-<a name="Teamjs+createEvent"></a>
+<a name="Teamupjs+createEvent"></a>
 
-### teamjs.createEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.createEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Creates an event with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The newly created event.  
 
 | Param | Type | Description |
@@ -134,15 +118,14 @@ Creates an event with provided options.
 
 **Example**  
 ```js
-//Creates an event
-client.createEvent({calendar: 'a_calendar_Id', data: {title: 'New Event', subcalendarIds: [111, 222, 333]}}).then(res => console.log(res));
+//Creates an eventclient.createEvent({calendar: 'a_calendar_Id', data: {title: 'New Event', subcalendarIds: [111, 222, 333]}}).then(res => console.log(res));
 ```
-<a name="Teamjs+updateEvent"></a>
+<a name="Teamupjs+updateEvent"></a>
 
-### teamjs.updateEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.updateEvent([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Updates an existing event with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The updated event.  
 
 | Param | Type | Description |
@@ -157,15 +140,14 @@ Updates an existing event with provided options.
 
 **Example**  
 ```js
-//Updates an event
-client.updateEvent({calendar: 'a_calendar_Id', event: '0000', 'data: {title: 'New Event', subcalendarIds: [111, 222, 333]}}).then(res => console.log(res));
+//Updates an eventclient.updateEvent({calendar: 'a_calendar_Id', event: '0000', 'data: {title: 'New Event', subcalendarIds: [111, 222, 333]}}).then(res => console.log(res));
 ```
-<a name="Teamjs+deleteEvent"></a>
+<a name="Teamupjs+deleteEvent"></a>
 
-### teamjs.deleteEvent([options]) ⇒ <code>Promise.&lt;String&gt;</code>
+### teamupjs.deleteEvent([options]) ⇒ <code>Promise.&lt;String&gt;</code>
 Deletes an event with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;String&gt;</code> - The undo-id.  
 
 | Param | Type | Description |
@@ -181,15 +163,14 @@ Deletes an event with provided options.
 
 **Example**  
 ```js
-//Deletes an event
-client.deleteEvent({calendar: 'a_calendar_Id', event: '0000', version: 'abc123'}).then(res => console.log(res));
+//Deletes an eventclient.deleteEvent({calendar: 'a_calendar_Id', event: '0000', version: 'abc123'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getModifiedSinceEvents"></a>
+<a name="Teamupjs+getModifiedSinceEvents"></a>
 
-### teamjs.getModifiedSinceEvents([options]) ⇒ <code>Promise.&lt;Array&gt;</code>
+### teamupjs.getModifiedSinceEvents([options]) ⇒ <code>Promise.&lt;Array&gt;</code>
 Gets a list of recently changed events.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Array&gt;</code> - An array containing the modified since events.  
 
 | Param | Type | Description |
@@ -203,15 +184,14 @@ Gets a list of recently changed events.
 
 **Example**  
 ```js
-//Fetch reecently updated events from the past day
-client.getModifiedSinceEvents({calendar: 'a_calendar_Id', modifiedSince: new Date(new Date().getTime() - 86400000)}).then(res => console.log(res));
+//Fetch reecently updated events from the past dayclient.getModifiedSinceEvents({calendar: 'a_calendar_Id', modifiedSince: new Date(new Date().getTime() - 86400000)}).then(res => console.log(res));
 ```
-<a name="Teamjs+searchEvents"></a>
+<a name="Teamupjs+searchEvents"></a>
 
-### teamjs.searchEvents([options]) ⇒ <code>Promise.&lt;Array&gt;</code>
+### teamupjs.searchEvents([options]) ⇒ <code>Promise.&lt;Array&gt;</code>
 Searches for events with a query string.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Array&gt;</code> - An array containing all queried events.  
 
 | Param | Type | Description |
@@ -228,15 +208,14 @@ Searches for events with a query string.
 
 **Example**  
 ```js
-//Searches for events in subcalendar 111 with query `example`
-client.searchEvents({calendar: 'a_calendar_Id', query: 'example', subcalendarIds: [111]}).then(res => console.log(res));
+//Searches for events in subcalendar 111 with query `example`client.searchEvents({calendar: 'a_calendar_Id', query: 'example', subcalendarIds: [111]}).then(res => console.log(res));
 ```
-<a name="Teamjs+getEventHistory"></a>
+<a name="Teamupjs+getEventHistory"></a>
 
-### teamjs.getEventHistory([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.getEventHistory([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Gets the event history of a specific event.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The object containing the event history.  
 
 | Param | Type | Description |
@@ -250,15 +229,14 @@ Gets the event history of a specific event.
 
 **Example**  
 ```js
-//Gets an event's history
-client.getEventHistory({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));
+//Gets an event's historyclient.getEventHistory({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getEventAux"></a>
+<a name="Teamupjs+getEventAux"></a>
 
-### teamjs.getEventAux([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.getEventAux([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Gets the auxiliary information of an event.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The object containing the event history.  
 
 | Param | Type | Description |
@@ -272,15 +250,14 @@ Gets the auxiliary information of an event.
 
 **Example**  
 ```js
-//Gets an event's auxiliary information
-client.getEventAux({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));
+//Gets an event's auxiliary informationclient.getEventAux({calendar: 'a_calendar_Id', event: '0000'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getSubcalendarsCollection"></a>
+<a name="Teamupjs+getSubcalendarsCollection"></a>
 
-### teamjs.getSubcalendarsCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
+### teamupjs.getSubcalendarsCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
 Fetches a calendar's subcalendars collection.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Array&gt;</code> - An array containing all subcalendars.  
 
 | Param | Type | Description |
@@ -289,18 +266,14 @@ Fetches a calendar's subcalendars collection.
 
 **Example**  
 ```js
-//Single parameter calendar provided
-client.getSubcalendarsCollection('a_calendar_Id').then(res => console.log(res));
-
-//Options parameter provided
-client.getSubcalendarsCollection({calendar: 'a_calendar_Id', lang: 'de'}).then(res => console.log(res));
+//Single parameter calendar providedclient.getSubcalendarsCollection('a_calendar_Id').then(res => console.log(res));//Options parameter providedclient.getSubcalendarsCollection({calendar: 'a_calendar_Id', lang: 'de'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getSubcalendar"></a>
+<a name="Teamupjs+getSubcalendar"></a>
 
-### teamjs.getSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.getSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Fetches a single subcalendar by Id.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The object containing the subcalendar.  
 
 | Param | Type | Description |
@@ -314,15 +287,14 @@ Fetches a single subcalendar by Id.
 
 **Example**  
 ```js
-//Fetch a single subcalendar
-client.getSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000'}).then(res => console.log(res));
+//Fetch a single subcalendarclient.getSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000'}).then(res => console.log(res));
 ```
-<a name="Teamjs+createSubcalendar"></a>
+<a name="Teamupjs+createSubcalendar"></a>
 
-### teamjs.createSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.createSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Creates a subcalendar with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The newly created subcalendar.  
 
 | Param | Type | Description |
@@ -336,15 +308,14 @@ Creates a subcalendar with provided options.
 
 **Example**  
 ```js
-//Creates an subcalendar
-client.createSubcalendar({calendar: 'a_calendar_Id', data: {name: 'My Subcalendar'}}).then(res => console.log(res));
+//Creates an subcalendarclient.createSubcalendar({calendar: 'a_calendar_Id', data: {name: 'My Subcalendar'}}).then(res => console.log(res));
 ```
-<a name="Teamjs+updateSubcalendar"></a>
+<a name="Teamupjs+updateSubcalendar"></a>
 
-### teamjs.updateSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.updateSubcalendar([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Updates an existing subcalendar with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The updated subcalendar.  
 
 | Param | Type | Description |
@@ -359,15 +330,14 @@ Updates an existing subcalendar with provided options.
 
 **Example**  
 ```js
-//Updates a subcalendar
-client.updateSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000', 'data: {name: 'New Name'}}).then(res => console.log(res));
+//Updates a subcalendarclient.updateSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000', 'data: {name: 'New Name'}}).then(res => console.log(res));
 ```
-<a name="Teamjs+deleteSubcalendar"></a>
+<a name="Teamupjs+deleteSubcalendar"></a>
 
-### teamjs.deleteSubcalendar([options]) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
+### teamupjs.deleteSubcalendar([options]) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
 Deletes a subcalendar with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;(Boolean\|Object)&gt;</code> - Returns true upon success, else returns the response.  
 
 | Param | Type | Description |
@@ -379,15 +349,14 @@ Deletes a subcalendar with provided options.
 
 **Example**  
 ```js
-//Deletes a subcalendar
-client.deleteSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000'}).then(res => console.log(res));
+//Deletes a subcalendarclient.deleteSubcalendar({calendar: 'a_calendar_Id', subcalendar: '0000'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getAccessKeysCollection"></a>
+<a name="Teamupjs+getAccessKeysCollection"></a>
 
-### teamjs.getAccessKeysCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
+### teamupjs.getAccessKeysCollection(calendarOrOptions) ⇒ <code>Promise.&lt;Array&gt;</code>
 Fetches a calendar's access keys collection.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Array&gt;</code> - An array containing all access keys.  
 
 | Param | Type | Description |
@@ -396,18 +365,14 @@ Fetches a calendar's access keys collection.
 
 **Example**  
 ```js
-//Single parameter calendar provided
-client.getAccessKeysCollection('a_calendar_Id').then(res => console.log(res));
-
-//Options parameter provided
-client.getAccessKeysCollection({calendar: 'a_calendar_Id', password: 'password'}).then(res => console.log(res));
+//Single parameter calendar providedclient.getAccessKeysCollection('a_calendar_Id').then(res => console.log(res));//Options parameter providedclient.getAccessKeysCollection({calendar: 'a_calendar_Id', password: 'password'}).then(res => console.log(res));
 ```
-<a name="Teamjs+getAccessKey"></a>
+<a name="Teamupjs+getAccessKey"></a>
 
-### teamjs.getAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.getAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Fetches a single access key by Id.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The object containing the access key.  
 
 | Param | Type | Description |
@@ -421,15 +386,14 @@ Fetches a single access key by Id.
 
 **Example**  
 ```js
-//Fetch a single access key
-client.getAccessKey({calendar: 'a_calendar_Id', accessKey: '0000'}).then(res => console.log(res));
+//Fetch a single access keyclient.getAccessKey({calendar: 'a_calendar_Id', accessKey: '0000'}).then(res => console.log(res));
 ```
-<a name="Teamjs+createAccessKey"></a>
+<a name="Teamupjs+createAccessKey"></a>
 
-### teamjs.createAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.createAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Creates a access key with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The newly created access key.  
 
 | Param | Type | Description |
@@ -443,15 +407,14 @@ Creates a access key with provided options.
 
 **Example**  
 ```js
-//Creates an access key
-client.createAccessKey({calendar: 'a_calendar_Id', data: {name: 'My Access Key', admin: true}}).then(res => console.log(res));
+//Creates an access keyclient.createAccessKey({calendar: 'a_calendar_Id', data: {name: 'My Access Key', admin: true}}).then(res => console.log(res));
 ```
-<a name="Teamjs+updateAccessKey"></a>
+<a name="Teamupjs+updateAccessKey"></a>
 
-### teamjs.updateAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
+### teamupjs.updateAccessKey([options]) ⇒ <code>Promise.&lt;Object&gt;</code>
 Updates an existing access key with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;Object&gt;</code> - The updated access key.  
 
 | Param | Type | Description |
@@ -466,15 +429,14 @@ Updates an existing access key with provided options.
 
 **Example**  
 ```js
-//Updates an access key
-client.updateAccessKey({calendar: 'a_calendar_Id', accessKey: '0000', 'data: {name: 'New Name', admin: false}}).then(res => console.log(res));
+//Updates an access keyclient.updateAccessKey({calendar: 'a_calendar_Id', accessKey: '0000', 'data: {name: 'New Name', admin: false}}).then(res => console.log(res));
 ```
-<a name="Teamjs+deleteAccessKey"></a>
+<a name="Teamupjs+deleteAccessKey"></a>
 
-### teamjs.deleteAccessKey([options]) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
+### teamupjs.deleteAccessKey([options]) ⇒ <code>Promise.&lt;(Boolean\|Object)&gt;</code>
 Deletes an access key with provided options.
 
-**Kind**: instance method of [<code>Teamjs</code>](#Teamjs)  
+**Kind**: instance method of [<code>Teamupjs</code>](#Teamupjs)  
 **Returns**: <code>Promise.&lt;(Boolean\|Object)&gt;</code> - Returns true upon success, else returns the response.  
 
 | Param | Type | Description |
@@ -486,6 +448,5 @@ Deletes an access key with provided options.
 
 **Example**  
 ```js
-//Deletes an access key
-client.deleteAccessKey({calendar: 'a_calendar_Id', accessKey: '0000'}).then(res => console.log(res));
+//Deletes an access keyclient.deleteAccessKey({calendar: 'a_calendar_Id', accessKey: '0000'}).then(res => console.log(res));
 ```

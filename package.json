@@ -18,5 +18,8 @@
   "homepage": "https://github.com/BuildBot42/teamup.js#readme",
   "dependencies": {
     "node-fetch": "2.6.6"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^6.0.1"
   }
 }
