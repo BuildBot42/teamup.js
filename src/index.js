@@ -154,9 +154,11 @@ class Teamupjs {
 
     calendarOrOptions.subcalendarIds = calendarOrOptions.subcalendarIds.join('&subcalendarId[]=');
 
+    if(calendarOrOptions.subcalendarIds !== '') calendarOrOptions.subcalendarIds = '&subcalendarId[]=' + calendarOrOptions.subcalendarIds
+
     let res = await fetch('https://api.teamup.com/' + calendarOrOptions.calendar + '/events?lang=' + calendarOrOptions.lang
     + '&tz=' + calendarOrOptions.timezone
-    + '&subcalendarId[]=' + calendarOrOptions.subcalendarIds
+    + calendarOrOptions.subcalendarIds
     + '&startDate=' + calendarOrOptions.startDate.getFullYear() + '-' + (calendarOrOptions.startDate.getMonth() + 1) + '-' + calendarOrOptions.startDate.getDate()
     + '&endDate=' + calendarOrOptions.endDate.getFullYear() + '-' + (calendarOrOptions.endDate.getMonth() + 1) + '-' + calendarOrOptions.endDate.getDate(), {
       headers: {
@@ -420,7 +422,9 @@ class Teamupjs {
 
     options.subcalendarIds = options.subcalendarIds.join('&subcalendarId[]=');
 
-    let res = await fetch('https://api.teamup.com/' + options.calendar + '/events?query=' + options.query + '&lang=' + options.lang + '&tz=' + options.timezone + '&startDate=' + options.startDate + '&endDate=' + options.endDate + '&subcalendarIds[]=' + options.subcalendarIds, {
+    if(options.subcalendarIds !== '') options.subcalendarIds = '&subcalendarId[]=' + options.subcalendarIds
+
+    let res = await fetch('https://api.teamup.com/' + options.calendar + '/events?query=' + options.query + '&lang=' + options.lang + '&tz=' + options.timezone + '&startDate=' + options.startDate + '&endDate=' + options.endDate + options.subcalendarIds, {
       headers: {
         'Teamup-Token': this._token,
         'Teamup-Password': options.password
