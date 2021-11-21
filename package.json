@@ -1,6 +1,6 @@
 {
   "name": "teamup.js",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A simple Node.js wrapper for https://api.teamup.com",
   "main": "./src/index.js",
   "scripts": {
